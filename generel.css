@@ -1,0 +1,61 @@
+/*************** Reset *********************/
+:root {
+  /*baggrund*/
+  --primary-baground-color: #0b0a1e;
+
+  /*tekst*/
+  --primary-text-color: #f3ebeb;
+
+  --secondary-text-color: #492c48;
+
+  /*strokes */
+  --acent-color: #ed98ea;
+
+  /*newsletter baggrundsfarve*/
+  --modal-bg-color: #c5e4fb;
+
+  /*gradient*/
+  --gradient: linear-gradient(to right, #c5e4fb, #fdaffa);
+
+  /*Knap når trykket på*/
+  --button-selected: #8f588d;
+
+  /* @font-face {
+  /* font-family: satoshi;
+  src: url (); } */
+
+  /*Typer af fonte*/
+  --primary-font: "open sans", sans-serif;
+  --secondary-font: "satoshi", sans-serif;
+
+  --primary-line-height: 1.5;
+  --primary-list-style: none;
+
+  /*SKRIFT-STØRRELSER*/
+  /*bruges til overskrifter samt brødtekst, mest brugte str.*/
+  --primary-font-size: 24px;
+
+  /*h2, bruges til overskrifter, næstmestbrugte str.*/
+  --secondary-font-size: 64px;
+
+  /*bruges til underoverskrifter (italic)*/
+  --tertiary-font-size: 32px;
+
+  /*bruges til footer, filtreringen, brødkrummesti og bookmark*/
+  --quaternary-font-size: 20px;
+
+  /*H1 helt på forsiden m. gradient*/
+  --quinary-font-size: 160px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
