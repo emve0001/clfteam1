@@ -18,11 +18,40 @@ import Bigbutton from "../components/Bigbutton.astro";
 		
 		<main>
 			<div class="top_wrapper">
-			<h1>COPENHAGEN LIGHT FESTIVAL</h1>
+			<h1 class="clf_index">COPENHAGEN LIGHT FESTIVAL</h1>
+			<div class="vektor_index">
 			<img src="src/img/clf-billeder/udenlys.webp" alt="">
+			</div>
+			<div class="knap_index">
 			<Bigbutton/>
 			</div>
+			</div>
 		</main>
+
+		<style>
+			.top_wrapper {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+				grid-template-rows: 1fr 1fr 1fr 1fr;
+			}
+			.clf_index {
+				grid-row: 1 / span 2;
+				grid-column: 1 / span 2;
+				font-size: 15rem;
+				color: var(--gradient);
+			}
+			.vektor_index {
+				grid-row: 1 / span 4;
+				grid-column: 1 / span 4;
+			}
+			.vektor_index img {
+				width: 100%;
+			}
+			.knap_index {
+				grid-row: 2;
+				grid-column: 3;
+			}
+		</style>
 
 	</body>
 </html>
