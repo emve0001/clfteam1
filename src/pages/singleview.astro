@@ -1,7 +1,8 @@
 ---
- import "../styles/generel.css";
- import Gemvaerket from "../components/Gemvaerket.astro";""
+ import MainLayout from "../mainlayout/MainLayout.astro";
+  import Gemvaerket from "../components/Gemvaerket.astro";
 ---
+<MainLayout> 
 <article>
 <h2>VÆRK 03.</h2>
 <template>
@@ -58,8 +59,8 @@
 <p class="pink-p">TAK TIL:</p> <p class="brødtekst">NEONSIGN</p>
 </div>
 <Gemvaerket/>
-<div/>
-<img src="../img/clf-billeder/03.webp" alt="billede3">
+<div>
+<img src="src/img/clf-billeder/03.webp" alt="billede3">
 </div>
 <div><p>Der ligger et dybt spørgsmål i hjertet af PiXLEarth: Hvad har klimaforandringerne rent faktisk forårsaget? Hvad har vi mennesker været medvirkende til? Disse spørgsmål er drivkraften bag dette projekt, hvori kunstnerne stræber efter at præsentere den komplekse problemstilling på en enkel, men sofistikeret måde.
 
@@ -72,12 +73,14 @@ Frederik Hougs har i samarbejde med Hans E. Madsen deltaget i Copenhagen Light F
 I 2023 deltog Frederik Hougs og Claus Boysen med værket Waves.
 </p></div>
 </article>
+</MainLayout>
 
 <style>
     .line{
- --acent-color: #ed98ea;
+color: var(--acent-color);
  border-width: 1px;
- width: 50%;
+ width: 95%;
+ margin:auto;
     }
 .brødkrummesti{
 color: var(--acent-color);
