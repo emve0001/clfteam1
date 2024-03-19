@@ -2,9 +2,75 @@
  
 ---
 <article>
-<h2>Hej</h2>
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis vero dolorem ipsam assumenda aspernatur consequuntur consectetur nulla quod, mollitia dolore illo laudantium ex nam? Illo dignissimos aspernatur sit illum maiores.</p>
-<button>Klik her</button>
+    <label class="toggle">
+        <input type="checkbox">
+        <span class="slider round"></span>
+        <span class="text">Turn On!</span>
+    </label>
 </article>
 
-<style></style>
+<style>/* Skjul standardcheckboxen */
+.toggle input {
+  display: none;
+}
+
+/* Skiftknappens overordnede stil */
+.toggle {
+  position: relative;
+  display: inline-block;
+  padding: 14px;
+  border: 2px solid var(--acent-color); /* Lyserødt stroke (omrids) */
+  border-radius: 97px;
+width: 244px;
+    height: 100px;
+}
+
+/* Skiftknappens kugle (den cirkulære del) */
+.slider {
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  bottom: 0;
+  width: 36px; /* Bredden af knappens slider */
+  height: 36px; /* Højden af knappens slider */
+  border-radius: 50%; /* Gør sliderknappen til en cirkel */
+  transition: 0.4s;
+}
+
+/* Rund slider, der skifter til en anden farve, når knappen er tændt */
+input:checked + .slider {
+  background-color: #fff; /* Farve på slider, når den er tændt */
+  left: calc(100% - 43px);
+}
+
+/* Visuelt layout af den faktiske tænd/sluk-knap */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 36px; /* Højden af knappens slider */
+  width: 36px; /* Bredden af knappens slider */
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2px; /* Afskrivning fra knappens venstre side */
+  background-color: var(--acent-color); /* Farve på sliderknappen */
+  border-radius: 50%; /* Gør sliderknappen til en cirkel */
+  transition: 0.4s;
+}
+
+/* Tekst i knappen */
+.text {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  font-family: Arial, sans-serif;
+  font-size: var(--quaternary-font-size);
+  color: #333;
+  transition: opacity 0.4s; /* Tilføj overgang til teksten */
+  opacity: 1; /* Start med fuld synlighed */
+}
+
+/* Skjul teksten, når knappen er tændt */
+input:checked + .slider + .text {
+  opacity: 0;
+}</style>
