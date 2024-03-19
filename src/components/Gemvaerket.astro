@@ -1,0 +1,26 @@
+---
+ import MainLayout from "../mainlayout/MainLayout.astro";
+---
+<article>
+    <div class="gem-wrapper"> 
+        <div class="gem_billede">
+    <img src="../img/clf-billeder/bookmark.svg" alt="svg">
+</div>
+<p class="styling">Gem værket</p>
+</div>
+</article>
+
+<style> 
+.gem-wrapper{
+display: grid;
+grid-template-columns: 1fr 1fr;
+}  
+
+.gem_billede {
+    grid-column: 1;
+    color: var(--acent-color);
+}
+.styling {
+    grid-column: 2;
+}
+    </style>
