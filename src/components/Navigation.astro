@@ -1,4 +1,133 @@
 ---
-
+ import MainLayout from "../mainlayout/MainLayout.astro";
+ import "../menu.js";
 ---
-<nav></nav>
+<MainLayout> 
+    <div class="logo">
+        <a href="index.astro"><img src="src/img/clf-billeder/logo.webp" alt="Logo" loading="lazy">
+        </a>
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">DANSK</a></li>
+            <li><a href="#">ENGELSK</a></li>
+            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+  <path d="M15.8334 15.75V14.25C15.8334 13.4544 15.4998 12.6913 14.9059 12.1287C14.3121 11.5661 13.5066 11.25 12.6667 11.25H6.33341C5.49356 11.25 4.68811 11.5661 4.09424 12.1287C3.50038 12.6913 3.16675 13.4544 3.16675 14.25V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9.49992 8.25C11.2488 8.25 12.6666 6.90685 12.6666 5.25C12.6666 3.59315 11.2488 2.25 9.49992 2.25C7.75102 2.25 6.33325 3.59315 6.33325 5.25C6.33325 6.90685 7.75102 8.25 9.49992 8.25Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a></li>
+        </ul>
+
+        <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        </div>
+    </nav>
+</MainLayout>
+
+<style>
+    header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+}
+
+.menu a:hover {
+  color: #f00;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+</style>

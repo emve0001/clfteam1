@@ -20,9 +20,10 @@
   /*Knap når trykket på*/
   --button-selected: #8f588d;
 
-  /* @font-face {
-  /* font-family: satoshi;
-  src: url (); } */
+  @font-face {
+    font-family: satoshi;
+    src: url ("../fonts/fonts/");
+  }
 
   /*Typer af fonte*/
   --primary-font: "open sans", sans-serif;
