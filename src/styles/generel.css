@@ -60,3 +60,11 @@ img {
   height: auto;
   display: block;
 }
+
+p {
+  color: var(--primary-text-color);
+}
+body {
+  background-color: var(--primary-baground-color);
+  margin: 40px;
+}

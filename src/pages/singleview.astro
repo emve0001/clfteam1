@@ -5,9 +5,8 @@
 <MainLayout> 
 <article>
 <h2>VÆRK 03.</h2>
-<template>
     <hr class="line">
-</template>
+
 
 <article class="brødkrummesti"><p>forside > værker 2024 > 05. “Barok Nation”</p></article>
 
@@ -60,7 +59,7 @@
 </div>
 <Gemvaerket/>
 <div>
-<img src="src/img/clf-billeder/03.webp" alt="billede3">
+<div class="billede"><img src="src/img/clf-billeder/03.webp" alt="billede3"></div>
 </div>
 <div><p>Der ligger et dybt spørgsmål i hjertet af PiXLEarth: Hvad har klimaforandringerne rent faktisk forårsaget? Hvad har vi mennesker været medvirkende til? Disse spørgsmål er drivkraften bag dette projekt, hvori kunstnerne stræber efter at præsentere den komplekse problemstilling på en enkel, men sofistikeret måde.
 
@@ -77,9 +76,9 @@ I 2023 deltog Frederik Hougs og Claus Boysen med værket Waves.
 
 <style>
     .line{
-color: var(--acent-color);
+      border-color: var(--acent-color);
  border-width: 1px;
- width: 95%;
+ width: 100%;
  margin:auto;
     }
 .brødkrummesti{
@@ -87,4 +86,21 @@ color: var(--acent-color);
 font-size: var(--quaternary-font-size);
      }
 
+  
+p, h2{
+		color: var(--primary-text-color);
+	}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.container{
+  grid-column: 1;
+}
+.billede{
+  grid-column: 2;
+  grid-row: 1;
+}
 </style>
