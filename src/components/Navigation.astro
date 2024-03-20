@@ -1,4 +1,28 @@
 ---
-
+ import MainLayout from "../mainlayout/MainLayout.astro";
 ---
-<nav></nav>
+<MainLayout> 
+
+<header>
+    <div class="logo">
+        <a href="index.astro"><img src="src/img/clf-billeder/logo.webp" alt="Logo" loading="lazy">
+        </a>
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">DANSK</a></li>
+            <li><a href="#">ENGELSK</a></li>
+            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+  <path d="M15.8334 15.75V14.25C15.8334 13.4544 15.4998 12.6913 14.9059 12.1287C14.3121 11.5661 13.5066 11.25 12.6667 11.25H6.33341C5.49356 11.25 4.68811 11.5661 4.09424 12.1287C3.50038 12.6913 3.16675 13.4544 3.16675 14.25V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9.49992 8.25C11.2488 8.25 12.6666 6.90685 12.6666 5.25C12.6666 3.59315 11.2488 2.25 9.49992 2.25C7.75102 2.25 6.33325 3.59315 6.33325 5.25C6.33325 6.90685 7.75102 8.25 9.49992 8.25Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a></li>
+        </ul>
+
+        <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        </div>
+    </nav>
+</header>
+
