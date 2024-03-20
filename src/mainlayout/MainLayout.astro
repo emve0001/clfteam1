@@ -1,7 +1,7 @@
 ---
 import "../styles/generel.css";
 import "../menu.js";
-import "../components/Navigation.astro"
+import Navigation from "../components/Navigation.astro"
 ---
 <html lang="en">
 	<head>
@@ -12,7 +12,7 @@ import "../components/Navigation.astro"
 		<title>Astro</title>
 	</head>
 <body>
-<header></header>
+<header><Navigation/></header>
 <main>
 	
 /* Slot er noget man kan sætte ind i et komponent, for */    
