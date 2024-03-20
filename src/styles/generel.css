@@ -63,7 +63,15 @@ img {
 
 p {
   color: var(--primary-text-color);
+  font-size: var(--primary-font-size);
+  font-family: var(--secondary-font);
 }
+
+h1 {
+  font-size: var(--quinary-font-size);
+  font-family: (var(--primary-font));
+}
+
 body {
   background-color: var(--primary-baground-color);
   margin: 40px;
