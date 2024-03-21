@@ -1,23 +1,7 @@
 ---
-import "../global.css";
-
+import Mainlayout from "../mainlayout/MainLayout.astro"
+import Gemvarket from "../components/Gemvaerket.astro"
 ---
-
-<html lang="da">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-		<title>Astro</title>
-	</head>
-
-
-	<body>
-		
 
 		<h2>Copenhagen Light Festival 2024</h2>
 		<h3>Alle lysværker & events er i perioden d. 2. feb - 25. feb</h3>
@@ -29,10 +13,10 @@ import "../global.css";
 
 		<template class="vaerker_grid">
 			<div class="vaerk_grid_item">
+				<h4 class="vaerkname">VAERK NAME</h4>
 				<a href=""><img class="vaerkimage" src="" alt="vaerk name">
-					<h4 class="vaerkname">VAERK NAME</h4>
 					<p class="vaerkartist">VAERK ARTIST</p>
-					<p class="gemvaerk">gem vaerk</p>
+				<Gemvaerket/>
 				</a>
 			</div>
 		</template>
@@ -40,18 +24,6 @@ import "../global.css";
 	</div>
 
 				
-	</body>
-
-
-
-
-
-	<footer>
-
-	</footer>
-
-</html>
-
 <style>
 h1, h2, p {
 	color: var(--primary-text-color);
