@@ -1,0 +1,39 @@
+---
+import "../styles/generel.css";
+---
+
+<article>
+      <div class="pil_knap1">
+        <button>
+          <a href="singleview.astro"><img src="src/img/clf-billeder/lillepil1.svg" alt="lillepil"></a>
+           
+        </button>
+    </div>
+</article>
+
+<style>
+
+.pil_knap1 {
+  display: inline-block;
+  border-radius: 20px; /* Justér dette tal for at ændre graden af afrundede hjørner */
+  overflow: hidden;
+}
+
+button {
+  background-color: transparent; /* Justér farven efter behov */
+  color: white;
+  border: 1px solid violet;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 60px;
+  height: 30px;
+}
+
+img {
+  position: absolute;
+  top: 8px;
+  width: 45%;
+  left: 24%;
+}
+</style>

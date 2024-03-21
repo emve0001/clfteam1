@@ -2,6 +2,7 @@
 import Mainlayout from "../mainlayout/MainLayout.astro"
 import Gemvarket from "../components/Gemvaerket.astro"
 import Lilleknap from "../components/Lilleknap.astro"
+import Laesmerepil from "../components/Laesmerepil.astro"
 
 ---
 <Mainlayout>
@@ -32,7 +33,7 @@ import Lilleknap from "../components/Lilleknap.astro"
 
 					<div class="gem_og_mere">
 						<Gemvarket/>
-						<p>knap</p>
+						<Laesmerepil/>
 					</div>
 				</a>
 			</div>
@@ -45,7 +46,7 @@ import Lilleknap from "../components/Lilleknap.astro"
 
 					<div class="gem_og_mere">
 						<Gemvarket/>
-						<p>knap</p>
+						<Laesmerepil/>
 					</div>
 				</a>
 			</div>
@@ -58,7 +59,7 @@ import Lilleknap from "../components/Lilleknap.astro"
 
 					<div class="gem_og_mere">
 						<Gemvarket/>
-						<p>knap</p>
+						<Laesmerepil/>
 					</div>
 				</a>
 			</div>
@@ -71,7 +72,7 @@ import Lilleknap from "../components/Lilleknap.astro"
 
 					<div class="gem_og_mere">
 						<Gemvarket/>
-						<p>knap</p>
+						<Laesmerepil/>
 					</div>
 				</a>
 			</div>
@@ -82,12 +83,12 @@ import Lilleknap from "../components/Lilleknap.astro"
 
 	 .vaerker_grid {
     display: grid;
-    max-width: 1200px;
-    margin-left: 10%;
-    margin-right: 10%;
+    max-width: 1100px;
+    margin-left: 13%;
+    margin-right: 13%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 15px;
+    gap: 25px;
     padding-top: 15px;
     padding-bottom: 60px;
   }
@@ -103,10 +104,40 @@ import Lilleknap from "../components/Lilleknap.astro"
   .gem_og_mere{
 	    display: grid;
 		  grid-template-columns: 1fr 1fr;
-		  gap: 10%;
+		  gap: 70%;
   }
-h1, h2, p {
+h3, h2, p {
 	color: var(--primary-text-color);
+	}
+
+h3, h2, p {
+	padding-top: 2%;
+	}
+
+
+/*h2, bruges til overskrifter, næstmestbrugte str.*/
+h2 {
+  color: var(--primary-text-color);
+  font-size: var(--secondary-font-size);
+  font-family: "open_sans-bold", sans-serif;
+}
+
+/*bruges til underoverskrifter (italic)*/
+h3 {
+  color: var(--primary-text-color);
+  font-size: var(--tertiary-font-size);
+  font-family: "satoshi_italic", sans-serif;
+}
+
+/*bruges til overskrifter samt brødtekst, mest brugte str.*/
+p {
+  color: var(--primary-text-color);
+  font-size: var(--primary-font-size);
+  font-family: "satoshi_regular";
+}
+
+	h3{
+		padding-bottom: 5%;
 	}
 
 .line{
@@ -121,5 +152,7 @@ h1, h2, p {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
+
+
 </style>
 
