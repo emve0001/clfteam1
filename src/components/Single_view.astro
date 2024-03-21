@@ -1,0 +1,37 @@
+---
+const vaerk_no = Astro.props.vaerk_no
+const vaerk_name = Astro.props.vaerk_name
+const artist = Astro.props.artist
+
+
+const {data}= Astro.props;
+console.log(data);
+---
+
+
+<article>
+    <h2>{vaerk_no}</h2>
+    <p class="bums">{vaerk_name}</p>
+    <p class="hej">{artist}</p>
+    
+</article>
+
+<style>
+
+h2 {
+    padding-bottom: 2%;
+    text-transform: uppercase;
+    font-family: open_sans-bold;
+}
+p {
+     font-family: satoshi_regular;
+     font-size: var( --primary-font-size);
+}
+.bums {
+    padding-bottom: 2%;
+}
+.hej {
+   padding-bottom: 5%;
+}
+
+</style>

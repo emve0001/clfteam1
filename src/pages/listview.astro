@@ -1,20 +1,33 @@
 ---
-import "../global.css";
 
+import Single_view from "../components/Single_view.astro";
+import MainLayout from "../mainlayout/MainLayout.astro";
+  // import Gemvaerket from "../components/Gemvaerket.astro";
+
+
+  const data = await fetch("https://vkrlgbqzulxudbzqgvwo.supabase.co/rest/v1/clf_data_team01", {
+    method: "GET",
+    headers: {
+      apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZrcmxnYnF6dWx4dWRienFndndvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTQyNTEsImV4cCI6MjAyNjA3MDI1MX0.aBPigjNXVhN2yEcHZGHALDYU4PCJheP4Jm_xLk0XpQ4"
+    },
+  }).then(res=>res.json());
+
+  console.log(data);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+ <MainLayout>
+
+  <Single_view />
+  <section class="show">
+    {
+      data.map((show) => {
+        return  <Single_view vaerk_no={show.vaerk_no} vaerk_name={show.vaerk_name} artist={show.artist}/>;
+      })
+    }
+  </section>
+
+  <style>
+
+
+  </style>
