@@ -14,9 +14,60 @@ import "../global.css";
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 		<title>Astro</title>
 	</head>
+
+
 	<body>
 		
 
+		<h2>Copenhagen Light Festival 2024</h2>
+		<h3>Alle lysværker & events er i perioden d. 2. feb - 25. feb</h3>
+		<hr class="line">
 
+		<div class="knapper"> </div>
+
+	<div class="grid"></div>
+
+		<template class="vaerker_grid">
+			<div class="vaerk_grid_item">
+				<a href=""><img class="vaerkimage" src="" alt="vaerk name">
+					<h4 class="vaerkname">VAERK NAME</h4>
+					<p class="vaerkartist">VAERK ARTIST</p>
+					<p class="gemvaerk">gem vaerk</p>
+				</a>
+			</div>
+		</template>
+
+	</div>
+
+				
 	</body>
+
+
+
+
+
+	<footer>
+
+	</footer>
+
 </html>
+
+<style>
+h1, h2, p {
+	color: var(--primary-text-color);
+	}
+
+.line{
+    border-color: var(--acent-color);
+ 	border-width: 1px;
+ 	width: 100%;
+ 	margin:auto;
+    }
+	
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+</style>
+
