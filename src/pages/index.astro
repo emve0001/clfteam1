@@ -1,6 +1,7 @@
 ---
 import "../styles/generel.css";
 import Bigbutton from "../components/Bigbutton.astro";
+import Lillepil from "../components/Lillepil.astro";
 ---
 
 <html lang="da">
@@ -18,39 +19,184 @@ import Bigbutton from "../components/Bigbutton.astro";
 		
 		<main>
 			<div class="top_wrapper">
-			<h1 class="clf_index">COPENHAGEN LIGHT FESTIVAL</h1>
-			<div class="vektor_index">
-			<img src="src/img/clf-billeder/udenlys.webp" alt="">
+				<h1 class="clf_index">
+					COPENHAGEN LIGHT FESTIVAL
+
+				</h1>
+					<div class="vektor_index">
+						<img src="src/img/clf-billeder/udenlys.webp" alt="">
+					</div>
+						<div class="knap_index">
+							<Bigbutton/>
+						</div>
+						<div class="knap1_index">
+							<Lillepil/>
+						</div>
+						<div class="knap2_index">
+							<Lillepil/>
+						</div>
+						<div class="knap3_index">
+						<a href="#">VIL DU VÆRE MED SOM KUNSTNER?</a>
+						<div class="lang_pil_kunstner_knap"></div>
+							<img src="src/img/clf-billeder/pil_lang.png" alt="billede af en lang pil">
+						</div>
+						</div>
 			</div>
-			<div class="knap_index">
-			<Bigbutton/>
+			
+			<div class="paragraf_index">
+				<p>Se hér, hvilke 58 lysværker vi præsenterede for festivalens mange gæster hver aften: 
+					<br>
+					COPENHAGEN LIGHT FESTIVAL PROGRAM 2024</p>
+					<br>
+				<a href="">FESTIVAL PROGRAM 2024</a>
+				<div class="lang_pil_index">
+						<img src="src/img/clf-billeder/pil_lang.png" alt="billede af en lang pil">
+			</div>
+
+				<br>
+				<br>
+
+				<p>I programmet finder du også omtaler af events i festivalperioden, herunder om koncertrækken med DR Vokalensemblet i Marmorkirken, om pop-ups ved lysværkerne og om Lysløbet og Familieløbet, der startede og sluttede på Ofelia Plads.
+					I februar 2024 kunne lysfestivalens gæster tage på opdagelse i Københavns indre by og i områderne Refshaleøen, Ørestad, DR Koncerthuset, Vestre Kirkegård, Nordhavn og brokvartererne.
+						<br>
+							<br>
+					Alle festivalens lysværker kunne opleves via gå-, løbe-, cykel, havnebus- og/eller busruter.
+				</p>
+				<br>
+				<a href="">KORT OVER LYSVÆRKER OG RUTER</a>
+				<div class="lang_pil_index">
+						<img src="src/img/clf-billeder/pil_lang.png" alt="billede af en lang pil">
+			</div>
+
+				<br>
+				<br>
+
+<h4>Deltag i fotokonkurrencen for Copenhagen Light Festival 2024!</h4>
+				<p>Igen i år inviterer vi lysfestivalens gæster, til at dele billeder af jeres yndlings lysværker og stemningsbilleder fra jeres ture rundt i byen – med os og med en jury, som vil nominere 25 billeder, der samles i en fotoudstilling om Copenhagen Light Festival 2024.</p>
+				<br>
+				<a href="">LÆS MERE</a>
+						<div class= "lang_pil_index">
+						<img src="src/img/clf-billeder/pil_lang.png" alt="billede af en lang pil">
+						</div>
+						<div class="deltag_billede_index">
+						<img src="src/img/clf-billeder/clf_index_billede.png" alt="billede af bro og lys">
+</div>
+
+<br>
+<br>
+				<h4>Guidede ture</h4>
+				<p>Igen i år inviterer vi lysfestivalens gæster, til at dele billeder af jeres yndlings lysværker og stemningsbilleder fra jeres ture rundt i byen – med os og med en jury, som vil nominere 25 billeder, der samles i en fotoudstilling om Copenhagen Light Festival 2024.</p>
+					<br>
+				<a href="#">LÆS MERE & BESTIL HER</a>
+				<div class="lang_pil_index">
+						<img src="src/img/clf-billeder/pil_lang.png" alt="billede af en lang pil">
 			</div>
 			</div>
+
 		</main>
 
+		<footer></footer>
+
 		<style>
+			main {
+				margin: 0 auto;
+			}
+			body {
+				background-color: #0B0A1E;
+			}
 			.top_wrapper {
 				display: grid;
 				grid-template-columns: 1fr 1fr 1fr 1fr;
-				grid-template-rows: 1fr 1fr 1fr 1fr;
+				grid-template-rows: 1fr 1fr;
+				margin-top: 10%;
 			}
 			.clf_index {
 				grid-row: 1 / span 2;
-				grid-column: 1 / span 2;
+				grid-column: 1 / span 4;
 				font-size: 15rem;
-				color: var(--gradient);
+				margin-left: 3%;
+				margin-right: 3%;
+				
 			}
+			h1 {
+    background: linear-gradient(to right, #caefef, #f3b8f1, #ec8fe9, #ec64e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	
+}
 			.vektor_index {
 				grid-row: 1 / span 4;
 				grid-column: 1 / span 4;
+				padding-top: 5%;
 			}
+
 			.vektor_index img {
 				width: 100%;
 			}
 			.knap_index {
-				grid-row: 2;
+				grid-row: 1;
 				grid-column: 3;
+			padding-top: 75%;
 			}
+			.knap1_index {
+				grid-row: 2;
+					grid-column: 1;
+					margin-left: 30%;
+					padding-top: 70%;
+				
+			}
+			.knap2_index {
+				grid-row: 2;
+					grid-column: 2;
+					padding-top: 70%;
+			}
+			.knap3_index {
+				grid-row: 2;
+					padding-top: 45%;
+					grid-column: 1 / span 2;
+					margin-left: 11%;
+					color: white;
+			}
+
+			a {
+				text-decoration: none;
+				color: var(--acent-color);
+				font-style: italic;
+				font-family:  var(--secondary-font);
+				letter-spacing: 2px;
+			}
+			.lang_pil_kunstner_knap img {
+width: 80%;
+			}
+
+			p {
+			
+				color: var(--primary-text-color);
+				font-style: italic;
+				font-family:  var(--secondary-font);
+				letter-spacing: 1px;
+				line-height: var(--primary-line-height);
+			}
+
+			.paragraf_index {
+				padding-top: 5%;
+				margin-left: 15%;
+				margin-right: 15%;
+			}
+			.lang_pil_index img {
+				width: 40%;
+			}
+			.deltag_billede_index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Juster højden efter behov */
+}
+
+.deltag_billede_index img {
+    width: 80%; /* Juster bredden efter behov */
+}
+
 		</style>
 
 	</body>

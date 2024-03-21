@@ -69,24 +69,24 @@ width: 244px;
   top: 5px;
   left: 3px;
   bottom: 0;
-  width: 36px; /* Bredden af knappens slider */
-  height: 36px; /* Højden af knappens slider */
+  width: 75px; /* Bredden af knappens slider */
+  height: 85px; /* Højden af knappens slider */
   border-radius: 50%; /* Gør sliderknappen til en cirkel */
   transition: 0.4s;
 }
 
 /* Rund slider, der skifter til en anden farve, når knappen er tændt */
 input:checked + .slider {
-  background-color: #fff; /* Farve på slider, når den er tændt */
-  left: calc(100% - 43px);
+  background-color: transparent; /* Farve på slider, når den er tændt */
+  left: calc(100% - 40%);
 }
 
 /* Visuelt layout af den faktiske tænd/sluk-knap */
 .slider:before {
   position: absolute;
   content: "";
-  height: 36px; /* Højden af knappens slider */
-  width: 36px; /* Bredden af knappens slider */
+ height: 87px; /* Højden af knappens slider */
+    width: 87px; /* Bredden af knappens slider */
   top: 50%;
   transform: translateY(-50%);
   left: 2px; /* Afskrivning fra knappens venstre side */
