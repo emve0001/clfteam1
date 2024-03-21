@@ -9,7 +9,45 @@
     </label>
 </article>
 
+<script>
+  export default {
+    data() {
+      return {
+        isLightOn: false
+      };
+    },
+    computed: {
+      buttonText() {
+        return this.isLightOn ? 'Sluk lys' : 'Tænd lys';
+      }
+    },
+    methods: {
+      toggleLights() {
+        this.isLightOn = !this.isLightOn;
+        const clfIndex = document.querySelector('.clf_index');
+        if (this.isLightOn) {
+          clfIndex.style.color = 'yellow'; // Skift farven til gul, når lyset er tændt
+        } else {
+          clfIndex.style.color = 'var(--gradient)'; // Skift tilbage til den oprindelige farve, når lyset slukkes
+        }
+      }
+    }
+  };
+</script>
+
 <style>/* Skjul standardcheckboxen */
+.toggle-button {
+    /* Tilpas stilen efter dine behov */
+    background-color: #ddd;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+
+
 .toggle input {
   display: none;
 }
