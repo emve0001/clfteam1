@@ -20,13 +20,9 @@
   /*Knap når trykket på*/
   --button-selected: #8f588d;
 
-  /* @font-face {
-  /* font-family: satoshi;
-  src: url (); } */
-
   /*Typer af fonte*/
-  --primary-font: "open sans", sans-serif;
-  --secondary-font: "satoshi", sans-serif;
+  --primary-font: "satoshi_regular";
+  --secondary-font: "open_sans-bold";
 
   --primary-line-height: 1.5;
   --primary-list-style: none;
@@ -48,6 +44,33 @@
   --quinary-font-size: 160px;
 }
 
+/* satoshi fonts */
+@font-face {
+  font-family: satoshi_regular;
+  src: url ("src/fonts/fonts/Satoshi-Regular.woff2");
+}
+@font-face {
+  font-family: satoshi_medium;
+  src: url ("src/fonts/fonts/Satoshi-Medium.woff2");
+}
+@font-face {
+  font-family: satoshi_bold;
+  src: url ("src/fonts/fonts/Satoshi-Bold.woff2");
+}
+@font-face {
+  font-family: satoshi_italic;
+  src: url ("src/fonts/fonts/Satoshi-Lightitalic.woff2");
+}
+/* open sans fonts */
+@font-face {
+  font-family: open_sans-bold;
+  src: url ("src/fonts/fonts/OpenSans-Bold.woff2");
+}
+@font-face {
+  font-family: open_sans-extrabold;
+  src: url ("src/fonts/fonts/OpenSans-ExstraBold.woff2");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -61,19 +84,40 @@ img {
   display: block;
 }
 
+/*bruges til overskrifter samt brødtekst, mest brugte str.*/
 p {
   color: var(--primary-text-color);
   font-size: var(--primary-font-size);
-  font-family: var(--secondary-font);
+  font-family: var(--primary-font);
 }
+/*H1 helt på forsiden m. gradient*/
 h1 {
   color: var(--gradient);
   font-size: var(--quinary-font-size);
+  font-family: "open_sans-extrabold", sans-serif;
 }
+
+/*h2, bruges til overskrifter, næstmestbrugte str.*/
 h2 {
   color: var(--primary-text-color);
   font-size: var(--secondary-font-size);
+  font-family: var(--secondary-font), sans-serif;
 }
+
+/*bruges til underoverskrifter (italic)*/
+h3 {
+  color: var(--primary-text-color);
+  font-size: var(--tertiary-font-size);
+  font-family: "satoshi_italic", sans-serif;
+}
+
+/*bruges til footer, filtreringen, brødkrummesti og bookmark*/
+h4 {
+  color: var(--primary-text-color);
+  font-size: var(--quaternary-font-size);
+  font-family: "satoshi_regular", sans-serif;
+}
+
 body {
   background-color: var(--primary-baground-color);
   margin: 40px;
