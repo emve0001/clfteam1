@@ -1,5 +1,6 @@
 ---
  import MainLayout from "../mainlayout/MainLayout.astro";
+ import "../styles/generel.css";
 ---
 <article>
     <div class="gem-wrapper"> 
@@ -16,6 +17,7 @@
 .gem-wrapper{
 display: grid;
 grid-template-columns: 1fr 1fr;
+width: 100px;
 }  
 
 .gem_billede {
@@ -24,5 +26,7 @@ grid-template-columns: 1fr 1fr;
 }
 .styling {
     grid-column: 2;
+    width: 200px;
+    padding-left: 4%;
 }
     </style>

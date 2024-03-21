@@ -1,30 +1,110 @@
 ---
 import Mainlayout from "../mainlayout/MainLayout.astro"
 import Gemvarket from "../components/Gemvaerket.astro"
----
+import Lilleknap from "../components/Lilleknap.astro"
 
+---
+<Mainlayout>
 		<h2>Copenhagen Light Festival 2024</h2>
 		<h3>Alle lysværker & events er i perioden d. 2. feb - 25. feb</h3>
 		<hr class="line">
 
-		<div class="knapper"> </div>
+		<div class="knapper_imageview"> 
+			<div class="lilleknap">
+							<tekst1/> 
+				<Lilleknap/> 
+			</div>
+				<div class="lilleknap">
+				<Lilleknap/> 
+			</div>
+				<div class="lilleknap">
+				<Lilleknap/> 
+			</div>
+		</div>
 
-	<div class="grid"></div>
 
-		<template class="vaerker_grid">
-			<div class="vaerk_grid_item">
-				<h4 class="vaerkname">VAERK NAME</h4>
-				<a href=""><img class="vaerkimage" src="" alt="vaerk name">
-					<p class="vaerkartist">VAERK ARTIST</p>
-				<Gemvaerket/>
+		<div class="vaerker_grid">
+			<div class="vaerk_grid_item1"> <a href="singleview">
+					<h4 class="vaerkname">01.“du som er i himlene”</h4>
+					
+					<img src="src/img/clf-billeder/01.webp" alt="billede1">
+					<p class="vaerkartist">Af: Marie Nørgaard (DK)</p>
+
+					<div class="gem_og_mere">
+						<Gemvarket/>
+						<p>knap</p>
+					</div>
 				</a>
 			</div>
-		</template>
 
-	</div>
+			<div class="vaerk_grid_item2"> <a href="singleview">
+					<h4 class="vaerkname">02.“gaia”</h4>
+					
+					<img src="src/img/clf-billeder/02.webp" alt="billede2">
+					<p class="vaerkartist">Af: Mani Nikdel (IR/DK)</p>
 
+					<div class="gem_og_mere">
+						<Gemvarket/>
+						<p>knap</p>
+					</div>
+				</a>
+			</div>
+	
+			<div class="vaerk_grid_item3"> <a href="singleview">
+					<h4 class="vaerkname">03.“PiXLEarth”</h4>
+					
+					<img src="src/img/clf-billeder/03.webp" alt="billede3">
+					<p class="vaerkartist">af: Frederik Hougs & Claus Boysen (DK)</p>
+
+					<div class="gem_og_mere">
+						<Gemvarket/>
+						<p>knap</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="vaerk_grid_item4"> <a href="singleview">
+					<h4 class="vaerkname">04.“Bron, Broen, Bridge”</h4>
+					
+					<img src="src/img/clf-billeder/04.webp" alt="billede4">
+					<p class="vaerkartist">Af: Båll & Brand (DK)</p>
+
+					<div class="gem_og_mere">
+						<Gemvarket/>
+						<p>knap</p>
+					</div>
+				</a>
+			</div>
+		</div>
+</Mainlayout>
 				
 <style>
+
+	 .vaerker_grid {
+    display: grid;
+    max-width: 1200px;
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    padding-top: 15px;
+    padding-bottom: 60px;
+  }
+
+  .knapper_imageview{
+	    display: grid;
+		  grid-template-columns: 1fr 1fr 1fr;
+		      max-width: 400px;
+			  padding-top: 2%;
+			  padding-bottom: 5%;
+  }
+
+  .gem_og_mere{
+	    display: grid;
+		  grid-template-columns: 1fr 1fr;
+		  gap: 10%;
+  }
 h1, h2, p {
 	color: var(--primary-text-color);
 	}
