@@ -1,8 +1,50 @@
 ---
- import MainLayout from "../mainlayout/MainLayout.astro";
+
+import Single_view from "../components/Single_view.astro";
+import MainLayout from "../mainlayout/MainLayout.astro";
   // import Gemvaerket from "../components/Gemvaerket.astro";
+
+
+  const data = await fetch("https://vkrlgbqzulxudbzqgvwo.supabase.co/rest/v1/clf_data_team01", {
+    method: "GET",
+    headers: {
+      apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZrcmxnYnF6dWx4dWRienFndndvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTQyNTEsImV4cCI6MjAyNjA3MDI1MX0.aBPigjNXVhN2yEcHZGHALDYU4PCJheP4Jm_xLk0XpQ4"
+    },
+  }).then(res=>res.json());
+
+  console.log(data);
 ---
-<MainLayout> 
+
+<MainLayout>
+
+  <Single_view />
+  <section class="show">
+    {
+      data.map((show) => {
+        return  <Single_view vaerk_no={show.vaerk_no} vaerk_name={show.vaerk_name} artist={show.artist}/>;
+      })
+    }
+  </section>
+
+
+
+
+
+          
+
+
+
+
+<!-- <MainLayout title = "COPENHAGEN LIGHT FESTIVAL 2024"> 
+  <Card header="Værk 01." paragraph ="vaerk_txt" />
+  <Card header="Værk 02." />
+  <Card header="Værk 03."/>
+  <Card header="Værk 04."/>
+  <Card header="Værk 05."/> -->
+
+
+<!-- 
 <article>
 <h2>VÆRK 03.</h2>
     <hr class="line">
@@ -57,7 +99,7 @@
       <p class="pink-p">TAK TIL:</p> <p class="brødtekst">NEONSIGN</p>
     </div>
 <!-- <Gemvaerket/> -->
-    <div class="billede"><img src="src/img/clf-billeder/03.webp" alt="billede3"></div>
+    <!-- <div class="billede"><img src="src/img/clf-billeder/03.webp" alt="billede3"></div>
     <div>
       <p>Der ligger et dybt spørgsmål i hjertet af PiXLEarth: Hvad har klimaforandringerne rent faktisk forårsaget? Hvad har vi mennesker været medvirkende til? Disse spørgsmål er drivkraften bag dette projekt, hvori kunstnerne stræber efter at præsentere den komplekse problemstilling på en enkel, men sofistikeret måde.
 
@@ -73,8 +115,8 @@
       </p>
     </div>
 </div>
-</article>
-</MainLayout>
+</article> -->
+</MainLayout> -->
 
 <style>
     .line{

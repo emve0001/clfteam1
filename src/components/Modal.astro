@@ -1,0 +1,22 @@
+---
+import MainLayout from "../mainlayout/MainLayout.astro";
+
+  const data = await fetch("https://vkrlgbqzulxudbzqgvwo.supabase.co/rest/v1/clf_data_team01", {
+    method: "GET",
+    headers: {
+      apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZrcmxnYnF6dWx4dWRienFndndvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTQyNTEsImV4cCI6MjAyNjA3MDI1MX0.aBPigjNXVhN2yEcHZGHALDYU4PCJheP4Jm_xLk0XpQ4"
+    },
+  }).then(res=>res.json());
+console.log(data);
+---
+
+
+<a href={`copenhagen_light_festival_2024/${data.slug}`}></a>
+<article>
+    <h2>{}</h2>
+</article>
+
+<script>
+    
+</script>
