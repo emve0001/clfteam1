@@ -1,6 +1,7 @@
 ---
 import "../styles/generel.css";
 import Navigation from "../components/Navigation.astro"
+import Footer from "../components/Footer.astro"
 ---
 <html lang="da">
 	<head>
@@ -17,9 +18,8 @@ import Navigation from "../components/Navigation.astro"
 /* Slot er noget man kan sætte ind i et komponent, for */    
       <slot/>
 	</main>        
-    <footer></footer>
+    <footer><Footer /></footer>
 	</body>
-
 </html>
 
 <style>
