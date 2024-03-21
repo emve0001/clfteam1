@@ -1,7 +1,39 @@
 ---
-
+import "../styles/generel.css";
 ---
 
 <article>
-    <img src="../img/clf-billeder/lille_pil.png" alt="billede af en lille pil">
+      <div class="pil_knap">
+        <button>
+            ALLE VÆRKER
+            <!-- <img src="img/lille_pil.png" alt=""> -->
+        </button>
+    </div>
 </article>
+
+<style>
+
+.pil_knap {
+  display: inline-block;
+  border-radius: 20px; /* Justér dette tal for at ændre graden af afrundede hjørner */
+  overflow: hidden;
+}
+
+button {
+  background-color: transparent; /* Justér farven efter behov */
+  color: white;
+  border: 1px solid violet;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 100px;
+  height: 30px;
+}
+
+img {
+  position: absolute;
+  top: 8px;
+  width: 20%;
+  left: 71px;
+}
+</style>
